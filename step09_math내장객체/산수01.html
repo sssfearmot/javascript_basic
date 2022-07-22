@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #trueFalse {
+            width: 327px;
+            height: 218px;
+            background: #f00;
+            border-radius: 50%;
+            padding: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="trueFalse"></div>
+
+    <script>
+
+        const 원주율 = Math.PI;
+
+        const trueFalse = document.querySelector('#trueFalse');
+        const With = trueFalse.clientWidth;
+        const height = trueFalse.clientHeight;
+
+        console.log(Width, height);
+
+        const M = Math.floor((Width / 2) * (height / 2) * 원주율);
+
+        trueFalse.innerHTML = `<span>${M}</span>`;
+
+        const randomNumber = Math.random();
+        console.log(randomNumber);
+
+        const NUM = Math.floor(randomNumber * 45 + 1);
+        console.log(NUM);
+
+        const lotto = [];
+
+        for (i = 0; i < 6; i++) {
+            const lottoNum = Math.floor(Math.random * 45 + 1);
+            lotto.push(lottoNum);
+            for (j in lotto) {
+                if (lottoNum == lotto[j]);
+                lottoNum = Math.floor(Math.random * 45 + 1);
+            }
+        }
+
+        console.log(lotto);
+
+    </script>
+
+</body>
+
+</html>

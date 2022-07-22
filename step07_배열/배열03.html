@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 03</title>
+</head>
+
+<body>
+    <h1>배열 03</h1>
+    <script>
+        const 김배열 = [
+            {id: 1, content: 'text1'},
+            {id: 2, content: 'text2'},
+            {id: 3, content: 'text3'},
+            {id: 4, content: 'text4'},
+            {id: 5, content: 'text5'},
+            {id: 6, content: 'text6'},
+            {id: 7, content: 'text7'}
+        ];
+
+        // 배열을 도와주는 함수 01 forEach
+        김배열.forEach((el, idx, arry) => console.log(el.content, idx, arry));
+
+
+        const TUL = document.querySelectorAll('.tMenu>li');
+        const TCON = document.querySelectorAll('.tContent>div');
+        console.log(TUL);
+
+        TUL.forEach((el, idx) => {
+            el.addEventListener('click', () => {
+                TUL.forEach(el => el.classList.remove('on'))
+                el.classList.add(on);
+                //console.log(idx);
+                TCON.forEach(el => el.classList.remove('on'))
+                TCON[idx].classList.add('on')
+            })
+        })
+
+        const 스프레드 = [...TUL];
+        console.log(스프레드);
+
+        const UL = document.querySelector('.tMenu');
+        const LI = [...UL.children];
+        console.log(LI);
+
+        // indexOf() 배열의 번호를 반환
+        UL.addEventListener('click', (e) => {
+            let idx = LI.indexOf(e.target);
+            console.log(idx)
+        })
+
+    </script>
+</body>
+
+</html>
